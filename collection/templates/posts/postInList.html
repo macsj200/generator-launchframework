@@ -1,0 +1,17 @@
+<!--
+
+    You will need to change this file, to reflect one <%= camelizedSingularName %> in
+    the list of <%= camelizedSingularName %>s from the find<%= humanizedSingularName %>s template. For example.
+    this.name would would display the name of the <%= camelizedSingularName %> within
+    the list.
+
+-->
+
+
+<template name="<%= camelizedSingularName %>InList">
+    <a href="/<%= camelizedSingularName %>s/{{this._id}}" class="list-group-item">
+        <h4 class="list-group-item-heading">{{this.title}}</h4>
+        <p class="list-group-item-text">{{this.body}}</p>
+        <p class="list-group-item-text">{{this.createdOn}}</p>
+    </a>
+</template>

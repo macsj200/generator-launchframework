@@ -1,0 +1,32 @@
+<template name="single<%= humanizedSingularName %>Page">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{this.title}}</h2>
+            </div>
+            <div class="col-md-12">
+                image here
+            </div>
+            <div class="col-md-12">
+                <p>
+                    {{this.body}}
+                </p>
+            </div>
+            <div class="col-md-offset-4 col-md-4">
+
+                {{#if isOwner }}
+                <a href="/<%= camelizedSingularName %>s/{{this._id}}/edit" class="btn btn-block btn-success">
+                    Edit this <%= camelizedSingularName %>
+                </a>
+                <a id="delete<%= humanizedSingularName %>Button" class="btn btn-block btn-danger">
+                    Delete this <%= camelizedSingularName %>
+                </a>
+                {{/if}}
+            </div>
+        </div>
+
+    </div>
+
+</template>
