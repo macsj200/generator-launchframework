@@ -47,7 +47,7 @@ var ModuleGenerator = yeoman.generators.NamedBase.extend({
             var collectionResources = ["findPosts.html", "findOnePost.html", "insertPost.html", "postInList.html", "postsCollection.js", "updatePost.html"];
 
             for(var i = 0; i < collectionResources.length; i++){
-                var replacedString = pagesResources[i].replace('Post', this.humanizedSingularName).replace('post', this.camelizedSingularName)
+                var replacedString = collectionResources[i].replace('Post', this.humanizedSingularName).replace('post', this.camelizedSingularName)
                     .replace('Posts', this.humanizedPluralName).replace('posts', this.camelizedPluralName);
 
 
